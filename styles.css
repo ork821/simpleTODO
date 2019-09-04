@@ -1,9 +1,14 @@
+.main {
+    width: 900px;
+}
 .todo {
     margin-top: 20px;
+    margin-right: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .text {
