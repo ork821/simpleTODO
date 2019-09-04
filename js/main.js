@@ -21,9 +21,17 @@ window.addEventListener('load', () => {
     });
 
     todo_field.addEventListener('click', (e) => {
-       if (e.target.classList.contains('delete')) {
-           e.target.parentElement.remove();
-       }
+        if (e.target.classList.contains('delete')) { // если нажали на кнопку удалить, то элемент удаляется
+            e.target.parentElement.remove();
+        }
+
+        // если нажали чисто на текст, а не на <li>, то текст зачеркивается, либо становится нормальным
+        if (e.target.classList.contains('line-through') && !e.target.classList.contains('todo')) {
+            e.target.classList.remove('line-through');
+        } else if (!e.target.classList.contains('line-through') && !e.target.classList.contains('todo')) {
+            e.target.classList.add('line-through');
+        }
+
 
     });
 

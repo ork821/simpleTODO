@@ -1,6 +1,12 @@
 .main {
     width: 900px;
+    margin: 10px auto;
 }
+
+.line-through {
+    text-decoration: line-through;
+}
+
 .todo {
     margin-top: 20px;
     margin-right: 40px;
